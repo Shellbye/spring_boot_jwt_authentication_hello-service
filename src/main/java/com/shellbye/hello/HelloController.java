@@ -23,6 +23,8 @@ public class HelloController {
     public String index() {
         // This is how eureka works
         String msg = restTemplate.getForObject("http://rest-service/msg/", String.class);
+        // This is by zuul
+//        String msg = restTemplate.getForObject("http://gate-zuul/msg/msg", String.class);
         return "Greetings from Spring Boot demo [Hello]! with msg: " + msg;
     }
 
