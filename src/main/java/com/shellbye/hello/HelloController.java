@@ -21,7 +21,7 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String index() {
-        // This is how eureka works
+        // This is how eureka works， with the help of Ribbon
         String msg = restTemplate.getForObject("http://rest-service/msg/", String.class);
         // This is by zuul
 //        String msg = restTemplate.getForObject("http://gate-zuul/msg/msg", String.class);
